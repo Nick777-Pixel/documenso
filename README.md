@@ -17,7 +17,7 @@
     ·
     <a href="https://github.com/documenso/documenso/issues">Issues</a>
     ·
-    <a href="https://github.com/documenso/documenso/milestones">Roadmap</a>
+    <a href="https://github.com/documenso/documenso/milestones">Roadmap:</a>
   </p>
 </p>
 

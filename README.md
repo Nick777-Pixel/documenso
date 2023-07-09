@@ -11,7 +11,7 @@
     <a href="https://documenso.com"><strong>Learn more »</strong></a>
     <br />
     <br />
-    <a href="https://join.slack.com/t/documenso/shared_invite/zt-1qwxxsvli-nDyojjt~wakhgBGl9JRl2w">Slack</a>
+    <a href="https://documen.so/slack">Slack</a>
     ·
     <a href="https://documenso.com">Website</a>
     ·
@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-   <a href="https://join.slack.com/t/documenso/shared_invite/zt-1qwxxsvli-nDyojjt~wakhgBGl9JRl2w"><img src="https://img.shields.io/badge/Slack-documenso.slack.com-%234A154B" alt="Join Documenso on Slack"></a> 
+   <a href="https://documen.so/slack"><img src="https://img.shields.io/badge/Slack-documenso.slack.com-%234A154B" alt="Join Documenso on Slack"></a> 
    <a href="https://github.com/documenso/documenso/stargazers"><img src="https://img.shields.io/github/stars/documenso/documenso" alt="Github Stars"></a>
    <a href="https://github.com/documenso/documenso/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-AGPLv3-purple" alt="License"></a>
    <a href="https://github.com/documenso/documenso/pulse"><img src="https://img.shields.io/github/commit-activity/m/documenso/documenso" alt="Commits-per-month"></a>
@@ -58,18 +58,16 @@ Signing documents digitally is fast, easy and should be best practice for every 
 
 ## Recognition
 
-
 <a href="https://www.producthunt.com/posts/documenso?utm_source=badge-top-post-badge&utm_medium=badge&utm_souce=badge-documenso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=395047&theme=light&period=daily" alt="Documenso - The&#0032;open&#0032;source&#0032;DocuSign&#0032;alternative | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 <a href="https://www.producthunt.com/posts/documenso?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-documenso" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=395047&theme=light" alt="Documenso - The&#0032;Open&#0032;Source&#0032;DocuSign&#0032;Alternative&#0046; | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
-
 ## Community and Next Steps 🎯
 
-The current project goal is to <b>[release a production ready version](https://github.com/documenso/documenso/milestone/1)</b> for self-hosting as soon as possible. If you want to help making that happen you can:
+We're currently working on a redesign of the application including a revamp of the codebase so Documenso can be more intuitive to use and robust to develop upon.
 
 - Check out the first source code release in this repository and test it
 - Tell us what you think in the current [Discussions](https://github.com/documenso/documenso/discussions)
-- Join the [Slack Channel](https://join.slack.com/t/documenso/shared_invite/zt-1qwxxsvli-nDyojjt~wakhgBGl9JRl2w) for any questions and getting to know to other community members
+- Join the [Slack Channel](https://documen.so/slack) for any questions and getting to know to other community members
 - ⭐ the repository to help us raise awareness
 - Spread the word on Twitter, that Documenso is working towards a more open signing tool
 - Fix or create [issues](https://github.com/documenso/documenso/issues), that are needed for the first production release
@@ -77,6 +75,13 @@ The current project goal is to <b>[release a production ready version](https://g
 ## Contributing
 
 - To contribute please see our [contribution guide](https://github.com/documenso/documenso/blob/main/CONTRIBUTING.md).
+
+
+## Contact us
+
+Contact us if you are interested in our Enterprise plan for large organizations that need extra flexibility and control.
+
+<a href="https://cal.com/timurercan/enterprise-customers?utm_source=banner&utm_campaign=oss"><img alt="Book us with Cal.com" src="https://cal.com/book-with-cal-dark.svg" /></a>
 
 # Tech
 
@@ -139,23 +144,25 @@ Follow these steps to setup documenso on you local machine:
   ```sh
   git clone https://github.com/documenso/documenso
   ```
-- Run <code>npm i</code> in root directory
-- Rename <code>.env.example</code> to <code>.env</code>
+- Run `npm i` in root directory
+- Rename `.env.example` to `.env`
 - Set DATABASE_URL value in .env file
   - You can use the provided test database url (may be wiped at any point)
   - Or setup a local postgres sql instance (recommended)
-- Create the database scheme by running <code>db-migrate:dev</code>
+- Create the database scheme by running `db-migrate:dev`
 - Setup your mail provider
-  - Set <code>SENDGRID_API_KEY</code> value in .env file
+  - Set `SENDGRID_API_KEY` value in .env file
   - You need a SendGrid account, which you can create [here](https://signup.sendgrid.com/).
-  - Documenso uses [Nodemailer](https://nodemailer.com/about/) so you can easily use your own SMTP server by setting the <code>SMTP\_\* variables</code> in your .env
-- Run <code>npm run dev</code> root directory to start
+  - Documenso uses [Nodemailer](https://nodemailer.com/about/) so you can easily use your own SMTP server by setting the `SMTP
+    \_
+  * variables` in your .env
+- Run `npm run dev` root directory to start
 - Register a new user at http://localhost:3000/signup
 
 ---
 
-- Optional: Seed the database using <code>npm run db-seed</code> to create a test user and document
-- Optional: Upload and sign <code>apps/web/resources/example.pdf</code> manually to test your setup
+- Optional: Seed the database using `npm run db-seed` to create a test user and document
+- Optional: Upload and sign `apps/web/resources/example.pdf` manually to test your setup
 
 - Optional: Create your own signing certificate
   - A demo certificate is provided in `/app/web/resources/certificate.p12`
@@ -163,7 +170,7 @@ Follow these steps to setup documenso on you local machine:
 
 ## Updating
 
-- If you pull the newest version from main, using <code>git pull</code>, it may be necessary to regenerate your database client
+- If you pull the newest version from main, using `git pull`, it may be necessary to regenerate your database client
 - You can do this by running the generate command in `/packages/prisma`:
   ```sh
   npx prisma generate
@@ -174,16 +181,22 @@ Follow these steps to setup documenso on you local machine:
 
 For the digital signature of your documents you need a signing certificate in .p12 format (public and private key). You can buy one (not recommended for dev) or use the steps to create a self-signed one:
 
-1. Generate a private key using the OpenSSL command. You can run the following command to generate a 2048-bit RSA key:\
-   <code>openssl genrsa -out private.key 2048</code>
+1. Generate a private key using the OpenSSL command. You can run the following command to generate a 2048-bit RSA key:
 
-2. Generate a self-signed certificate using the private key. You can run the following command to generate a self-signed certificate:\
-   <code>openssl req -new -x509 -key private.key -out certificate.crt -days 365</code> \
+   `openssl genrsa -out private.key 2048`
+
+2. Generate a self-signed certificate using the private key. You can run the following command to generate a self-signed certificate:
+
+   `openssl req -new -x509 -key private.key -out certificate.crt -days 365`
+
    This will prompt you to enter some information, such as the Common Name (CN) for the certificate. Make sure you enter the correct information. The -days parameter sets the number of days for which the certificate is valid.
-3. Combine the private key and the self-signed certificate to create the p12 certificate. You can run the following command to do this: \
-   <code>openssl pkcs12 -export -out certificate.p12 -inkey private.key -in certificate.crt</code>
+
+3. Combine the private key and the self-signed certificate to create the p12 certificate. You can run the following command to do this:
+
+   `openssl pkcs12 -export -out certificate.p12 -inkey private.key -in certificate.crt`
+
 4. You will be prompted to enter a password for the p12 file. Choose a strong password and remember it, as you will need it to use the certificate (**can be empty for dev certificates**)
-5. Place the certificate <code>/apps/web/resources/certificate.p12</code>
+5. Place the certificate `/apps/web/resources/certificate.p12`
 
 # Docker
 
@@ -197,9 +210,15 @@ Want to create a production ready docker image? Follow these steps:
 # Deploying - Coming Soon™
 
 - Docker support
-- One-Click-Deploy on Render.com Deploy
+- One-Click-Deploy on Render.com
 
 # Troubleshooting
+
+## I'm not receiving any emails when using the developer quickstart
+
+When using the developer quickstart an [Inbucket](https://inbucket.org/) server will be spun up in a docker container that will store all outgoing email locally for you to view.
+
+The Web UI can be found at http://localhost:9000 while the SMTP port will be on localhost:2500.
 
 ## Support IPv6
 
@@ -225,5 +244,5 @@ containers:
       - start
       - --
       - -H
-      - '::'
+      - "::"
 ```
